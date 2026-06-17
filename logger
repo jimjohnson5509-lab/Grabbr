@@ -1,0 +1,34 @@
+import requests
+def robloximagelogger(image_url:https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png str):
+    “”“
+    Function to log an image from Roblox given its URL.
+Parameters:
+- image_url:https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png str
+    The URL of the image to be logged.
+
+Returns:
+- bool:
+    True if the image was successfully logged, False otherwise.
+"""
+
+try:
+    # Send a GET request to the image URL
+    response = requests.get(https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png)
+
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Log the image
+        # Replace this line with your desired logging mechanism
+        print(f"Image logged: {https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png}")
+        return True
+    else:
+        # Failed to retrieve the image
+        print(f"Failed to retrieve image: {https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png}")
+        return False
+except requests.exceptions.RequestException as e:
+    # Error occurred during the request
+    print(f"Error occurred during request: {e}")
+    return False
+
+imageurl = “https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png”
+robloximagelogger(https://cdn.discordapp.com/attachments/1072666902519885854/1515912429559877742/image.png)
